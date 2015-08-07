@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+}
+
+nav {
+	.navbar-header {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 42px;
+		top: 0;
+
+		// navbar gradient
+		background: -webkit-linear-gradient(left, #ff6666, #ff3333);
+		background: -o-linear-gradient(right, #ff6666, #ff3333);
+		background: -moz-linear-gradient(right, #ff6666, #ff3333);
+		background: linear-gradient(to right, #ff6666, #ff3333);
+
+		.navbar-brand {
+			position: absolute;
+	    text-align: center;
+	    left: 0px;
+	    right: 0px;
+	    top: 2px;
+		}
+	}
+}

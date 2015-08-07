@@ -9,7 +9,8 @@
       </button>
       <div class="navbar-brand">
         <a href="{{pathFor 'home'}}">{{> hoodyLogo}}</a>
-      </div>
+      </div>      
+      {{> loginButtons align="right"}}
     </div>
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
@@ -27,9 +28,6 @@
             {{> notifications}}
           </li>
         {{/if}}
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        {{> loginButtons}}
       </ul>
     </div>
   </nav>

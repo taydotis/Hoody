@@ -3,14 +3,13 @@ body {
 }
 
 nav {
+
 	.navbar-header {
 		display: block;
 		position: relative;
 		width: 100%;
 		height: 42px;
 		top: 0;
-
-		// navbar gradient
 		background: -webkit-linear-gradient(left, #ff6666, #ff3333);
 		background: -o-linear-gradient(right, #ff6666, #ff3333);
 		background: -moz-linear-gradient(right, #ff6666, #ff3333);
@@ -22,6 +21,21 @@ nav {
 	    left: 0px;
 	    right: 0px;
 	    top: 2px;
+		}
+
+		// hiding toggle until i can setup the logic
+		.navbar-toggle {
+			display: none;
+		}
+
+		#login-buttons {
+			float: right;
+			padding: 12px 16px 0 0;
+			color: white;
+
+			.login-link-text {
+				text-decoration: none;
+			}
 		}
 	}
 }

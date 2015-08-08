@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	font-family:sans-serif;
 }
 
 nav {
@@ -37,5 +38,42 @@ nav {
 				text-decoration: none;
 			}
 		}
+	}
+
+	.post-view-menu {
+		display: table;
+		margin: 0 auto;
+		border: 3px #ffffff solid;
+	  border-radius: 3px;
+	  background: #ffffff;
+	  padding:0;
+
+	  .menu-contents{
+	  	margin: 0;
+	  	padding: 0;
+
+			.menu-item {
+				display: inline-block;
+				padding:6px;
+				border-radius:3px 0 0 3px;
+				margin:0;
+				a {
+					text-decoration: none;
+					font-size:14px;
+					font-weight:bold;
+					color:#000;
+				}
+			}
+			.menu-item:last-child {
+				margin-right:0;
+				border-radius:0 3px 3px 0;
+			}
+			.active {
+				background:#f33;
+				a {
+					color:#fff;
+				}
+			}
+	  }
 	}
 }

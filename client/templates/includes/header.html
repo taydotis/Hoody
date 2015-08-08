@@ -11,13 +11,15 @@
         <a href="{{pathFor 'home'}}">{{> hoodyLogo}}</a>
       </div>      
       {{> loginButtons align="right"}}
+      {{#if currentUser}}
+        <div class="navbar-submit">
+          <a href="{{pathFor 'postSubmit'}}" class="{{activeRouteClass 'postSubmit'}}">Post</a>
+        </div>
+      {{/if}}
     </div>
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if currentUser}}
-          <li class="{{activeRouteClass 'postSubmit'}}">
-            <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
-          </li>
           <li class="dropdown">
             {{> notifications}}
           </li>

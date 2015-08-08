@@ -61,7 +61,7 @@ if (Posts.find().count() === 0) {
 		votes: 0
 	});
 
-	for (var i = 0; i < 10; i++) {
+	for (var i = 0; i < 24; i++) {
 		Posts.insert({
 			title: 'Test Post #' + i,
 			author: sacha.profile.name,

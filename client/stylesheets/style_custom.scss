@@ -10,13 +10,38 @@ body {
   padding: 0 10px;
 }
 
-.arrow {
-  width: 12px;
-  height: 12px;
-  border-right: 5px solid #ff3333;
-  border-top: 5px solid #ff3333;
-  transform: rotate(-45deg);
+.post {
+	display: flex;
+	align-items: center;
+	-webkit-align-items: center;
+
+	.vote-wrapper {
+		padding: 0 10px;
+
+		.arrow.upvotable {
+		  width: 12px;
+		  height: 12px;
+		  border-right: 5px solid #333333;
+		  border-top: 5px solid #333333;
+		  transform: rotate(-45deg);
+		}
+
+		.arrow.disabled {
+		  width: 12px;
+		  height: 12px;
+		  border-right: 5px solid #ff3333;
+		  border-top: 5px solid #ff3333;
+		  transform: rotate(-45deg);
+		}
+	}
+
+	.post-content {
+		flex-grow: 1;
+		-webkit-flex-grow: 1;
+	}
 }
+
+
 
 nav {
 

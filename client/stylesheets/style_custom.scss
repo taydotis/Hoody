@@ -10,6 +10,14 @@ body {
   padding: 0 10px;
 }
 
+.arrow {
+  width: 12px;
+  height: 12px;
+  border-right: 5px solid #ff3333;
+  border-top: 5px solid #ff3333;
+  transform: rotate(-45deg);
+}
+
 nav {
 
 	.navbar-header {

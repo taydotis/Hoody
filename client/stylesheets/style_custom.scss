@@ -5,7 +5,7 @@ body {
 
 #main {
   position: relative;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -138,6 +138,41 @@ nav {
 .post-content {
 	h3 a{
 		text-decoration: none;
+	}
+}
+
+#submit-post {
+	#submit-form {
+		.controls {
+			box-sizing: border-box;
+			padding:10px;
+
+			#title {
+				width: 100%;
+				background-color: #f9f9f9;
+				border: 0;
+				border-radius: 3px;
+				font-size:14px;
+				padding:10px;
+				box-sizing: border-box;
+				outline:0px !important;
+				-webkit-appearance: none;
+			}
+		}
+	}
+	.btn {
+    display: block;
+		height: 32px;
+    line-height: 32px;
+    margin: 0 auto;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #f33;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
 	}
 }
 

@@ -1,9 +1,9 @@
 <template name="postSubmit">
-	<form class="main form page">
-		<div class="form-group {{errorClass 'title'}}">
-			<label class="control-label" for="title">Title</label>
+	<form class="main form page" id="submit-post">
+		<div class="form-group {{errorClass 'title'}}" id="submit-form">
+			<!-- <label class="control-label" for="title">Title</label> -->
 			<div class="controls">
-				<input name="title" id="title" type="text" value="" placeholder="Name your post" class="form-control" />
+				<textarea rows="4" name="title" id="title" type="text" value="" placeholder="Talk to your neighbors!" class="form-control"></textarea>
 				<span class="help-block">{{errorMessage 'title'}}</span>
 			</div>
 		</div>

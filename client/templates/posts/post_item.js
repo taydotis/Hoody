@@ -9,6 +9,9 @@ Template.postItem.helpers({
 		} else {
 			return 'disabled';
 		}
+	},
+	timePosted: function() {
+		return moment(this.submitted).fromNow();
 	}
 });
 

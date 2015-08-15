@@ -163,13 +163,13 @@ nav {
 	}
 }
 
-#submit-post, #edit-post {
+#submit-post, #edit-post, #submit-comment {
 	#submit-form {
 		.controls {
 			box-sizing: border-box;
 			padding:10px;
 
-			#title {
+			#title, #body {
 				width: 100%;
 				background-color: #f9f9f9;
 				border: 0;
@@ -200,7 +200,7 @@ nav {
 	    font-weight: bold;
 	    font-size: 14px;
 	    outline: none;
-	    width: 80px;
+	    width: 96px;
 		}
 
 		.delete {

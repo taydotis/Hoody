@@ -2,21 +2,21 @@ if (Posts.find().count() === 0) {
 	var now = new Date().getTime();
 
 	// create two users
-	var tomId = Meteor.users.insert({
-		profile: { name: 'Tom Coleman' }
+	var taylorId = Meteor.users.insert({
+		profile: { name: 'Taylor Raboin' }
 	});
-	var tom = Meteor.users.findOne(tomId);
+	var taylor = Meteor.users.findOne(taylorId);
 	
-	var sachaId = Meteor.users.insert({
-		profile: { name: 'Sacha Greif' }
+	var daveId = Meteor.users.insert({
+		profile: { name: 'Dave Pittman' }
 	});
-	var sacha = Meteor.users.findOne(sachaId);
+	var dave = Meteor.users.findOne(daveId);
 
 	var telescopeId = Posts.insert({
-		title: 'Introducing Telescope',
-		userId: sacha._id,
-		author: sacha.profile.name,
-		submitted: new Date(now - 7 * 3600 * 1000),
+		title: "Lost my dog. She's a black and white Australian sheperd named Bessy. Has anyone seen her?",
+		userId: taylor._id,
+		author: taylor.profile.name,
+		submitted: new Date(now - 1 * 3600 * 1000),
 		commentsCount: 2,
 		upvoters: [],
 		votes: 0
@@ -24,49 +24,38 @@ if (Posts.find().count() === 0) {
 
 	Comments.insert({
 		postId: telescopeId,
-		userId: tom._id,
-		author: tom.profile.name,
+		userId: dave._id,
+		author: dave.profile.name,
 		submitted: new Date(now - 5 * 3600 * 1000),
-		body: 'Interesting project Sacha, can I get involved?'
+		body: "My neighbor on Eastland saw this dog and is holding her in the backyard, I'll message you his info!"
 	});
 
 	Comments.insert({
 		postId: telescopeId,
-		userId: sacha._id,
-		author: sacha.profile.name,
+		userId: taylor._id,
+		author: taylor.profile.name,
 		submitted: new Date(now - 3 * 3600 * 1000),
-		body: 'You sure can Tom!'
+		body: 'Thank you so much, Dave!'
 	});
 
 	Posts.insert({
-		title: 'Meteor',
-		userId: tom._id,
-		author: tom.profile.name,
-		submitted: new Date(now - 10 * 3600 * 1000),
+		title: "Seriously, I just want somebody to watch reruns of Friends with me tonight. I do appreciate the irony in that. Message me!",
+		userId: taylor._id,
+		author: taylor.profile.name,
+		submitted: new Date(now - 2 * 3600 * 1000),
 		commentsCount: 0,
 		upvoters: [],
 		votes: 0
 	});
 
 	Posts.insert({
-		title: 'The Meteor Book',
-		userId: tom._id,
-		author: tom.profile.name,
-		submitted: new Date(now - 12 * 3600 * 1000),
-		commentscount: 0,
+		title: "I just remembered I actually don't like going out, anybody interested in buying my beer festival ticket? I'll sell it for half off.",
+		userId: dave._id,
+		author: dave.profile.name,
+		submitted: new Date(now - 3 * 3600 * 1000),
+		commentsCount: 0,
 		upvoters: [],
 		votes: 0
 	});
 
-	for (var i = 0; i < 24; i++) {
-		Posts.insert({
-			title: 'Test Post #' + i,
-			author: sacha.profile.name,
-			userId: sacha._id,
-			submitted: new Date(now - i * 3600 * 1000),
-			commentsCount: 0,
-			upvoters: [],
-			votes: 0
-		});
-	}
 }

@@ -6,7 +6,7 @@
 		<div class="post-content">
 			<h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
 			<p>
-				{{pluralize votes "vote"}},
+				<!-- {{pluralize votes "vote"}}, -->
 				submitted by {{author}} {{timePosted}},
 				<a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
 				{{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}

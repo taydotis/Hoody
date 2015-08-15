@@ -26,15 +26,17 @@
         {{/if}}
       </ul>
     </div>
-    <div class="post-view-menu">
-      <ul class="menu-contents">
-        <li class="menu-item {{activeRouteClass 'home' 'newPosts'}}">
-          <a href="{{pathFor 'newPosts'}}">New</a>
-        </li>
-        <li class="menu-item {{activeRouteClass 'bestPosts'}}">
-          <a href="{{pathFor 'bestPosts'}}">Best</a>
-        </li>
-      </ul>
-    </div>
+    {{#if showViews}}
+      <div class="post-view-menu">
+        <ul class="menu-contents">
+          <li class="menu-item {{activeRouteClass 'home' 'newPosts'}}">
+            <a href="{{pathFor 'newPosts'}}">New</a>
+          </li>
+          <li class="menu-item {{activeRouteClass 'bestPosts'}}">
+            <a href="{{pathFor 'bestPosts'}}">Best</a>
+          </li>
+        </ul>
+      </div>
+    {{/if}}
   </nav>
 </template>

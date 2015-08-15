@@ -8,5 +8,12 @@ Template.header.helpers({
 		});
 
 		return active && 'active';
+	},
+
+	showViews: function() {
+		var routeTemplate = Router.current().template;
+		if (routeTemplate === 'postsList') {
+			return true;
+		};
 	}
 });

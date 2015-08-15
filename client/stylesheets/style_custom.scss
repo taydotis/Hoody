@@ -163,7 +163,7 @@ nav {
 	}
 }
 
-#submit-post {
+#submit-post, #edit-post {
 	#submit-form {
 		.controls {
 			box-sizing: border-box;
@@ -182,20 +182,30 @@ nav {
 			}
 		}
 	}
-	.btn {
-    display: block;
-		height: 32px;
-    line-height: 32px;
-    margin: 0 auto;
-    padding: 0 8px;
-    border: 0;
-    border-radius: 3px;
-    background-color: #f33;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    outline:none;
+	.button-wrapper {
+		text-align: center;
+
+		.submit, .delete {
+	    display: inline-block;
+			height: 32px;
+	    line-height: 32px;
+	    padding: 0 8px;
+	    box-sizing: border-box;
+	    text-align: center;
+	    border: 0;
+	    border-radius: 3px;
+	    background-color: #f33;
+	    color: #fff;
+	    text-decoration: none;
+	    font-weight: bold;
+	    font-size: 14px;
+	    outline: none;
+	    width: 80px;
+		}
+
+		.delete {
+			background-color: #000;
+		}
 	}
 }
 

@@ -7,7 +7,7 @@
 			<h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
 			<p>
 				<!-- {{pluralize votes "vote"}}, -->
-				submitted by {{author}} {{timePosted}},
+				submitted by <a href="#">{{author}}</a> {{timePosted}},
 				<a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
 				{{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
 			</p>

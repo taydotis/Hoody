@@ -9,22 +9,22 @@
       </button>
       <div class="navbar-brand">
         <a href="{{pathFor 'home'}}">{{> hoodyLogo}}</a>
-      </div>      
-      {{> loginButtons align="right"}}
-      {{#if currentUser}}
-        <div class="navbar-submit">
-          <a href="{{pathFor 'postSubmit'}}" class="{{activeRouteClass 'postSubmit'}}">Post</a>
-        </div>
-      {{/if}}
-    </div>
-    <div class="collapse navbar-collapse" id="navigation">
-      <ul class="nav navbar-nav">
-        {{#if currentUser}}
-          <li class="dropdown">
-            {{> notifications}}
-          </li>
-        {{/if}}
-      </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav">    
+          {{#if currentUser}}
+            <div class="navbar-submit">
+              <a href="{{pathFor 'postSubmit'}}" class="{{activeRouteClass 'postSubmit'}}">Post</a>
+            </div>
+            <li class="dropdown">
+              {{> notifications}}
+            </li>
+          {{/if}}
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
+        </ul>
+      </div>
     </div>
     {{#if showViews}}
       <div class="post-view-menu">
